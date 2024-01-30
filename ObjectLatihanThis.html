@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Objek</title>
+</head>
+<body>
+    
+<script>
+    // function decralation
+    // this mengembalikan objek global
+    function halo(){
+        console.log(this);
+        console.log('Hallo World');
+    }
+    halo();
+
+    // object literal
+    // this mengembalikan objek yang bersangkutan
+    var obj = {}
+    obj.halo = function(){
+        console.log(this);
+        console.log('Hallo World')
+    }
+    obj.halo();
+
+    // constraction function
+    // this mengembalikan objek yang baru di buat (new)
+    function Halo(){
+        console.log(this);
+        console.log('Hallo World');
+    }
+    new Halo();
+</script>
+</body>
+</html>

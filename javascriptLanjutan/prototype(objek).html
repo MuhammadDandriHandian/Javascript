@@ -1,0 +1,133 @@
+<script>
+
+// // 1. object literal
+// // probem = tidak efektif untuk objek yang banyak
+    // let mahasiswa = {
+    //     nama : 'Muhammad Dandri Handian',
+    //     jurusan : 'Teknik Informatika', 
+    //     nilai : 20,
+    //     ujian : function(hasil){
+    //         this.nilai = this.nilai + hasil;
+    //         console.log(`Hallo ${this.nama}, anda mengambil program studi ${this.jurusan} dan nilai anda ${this.nilai}`)
+    //     }
+    // }
+    // let mahasiswa2 = {
+    //     nama : 'Ahdan Naufal Yasin',
+    //     jurusan : 'Ilmu Komunikasi', 
+    //     nilai : 25,
+    //     ujian : function(hasil){
+    //         this.nilai = this.nilai + hasil;
+    //         console.log(`Hallo ${this.nama}, anda mengambil program studi ${this.jurusan} dan nilai anda ${this.nilai}`)
+    //     }
+    // }
+
+// // 2. function declaration
+    // function mahasiswa(nama, nilai){
+    //     let mahasiswa = {};
+    //     mahasiswa.nama = nama;
+    //     mahasiswa.nilai = nilai;
+
+    //     mahasiswa.ujian = function(hasil){
+    //         this.nilai += hasil;
+    //         console.log(`Hallo ${this.nama}, nilai anda ${this.nilai}`);
+    //     }
+    //     mahasiswa.bolos = function(jam){
+    //         this.nilai -= jam;
+    //         console.log(`Hallo ${nama}, karena anda membolos maka nilai anda berkurang menjadi ${this.nilai}`)
+    //     }
+    //     return mahasiswa;
+    // }
+
+    // let dandri = mahasiswa('Muhammad Dandri Handian', 20);
+    // let ahdan = mahasiswa('Ahdan Naufal Y', 25);
+
+// // 3. constraction function
+    // function Mahasiswa(nama, nilai){
+    //     this.nama = nama;
+    //     this.nilai = nilai;
+
+    //     this.ujian = function(hasil){
+    //         this.nilai += hasil;
+    //         console.log(`Hallo ${this.nama}, nilai anda ${this.nilai}`);
+    //     }
+    //     this.bolos = function(jam){
+    //         this.nilai -= jam;
+    //         console.log(`Hallo ${nama}, karena anda membolos maka nilai anda berkurang menjadi ${this.nilai}`)
+    //     }
+    // }
+
+    // let dandri = new Mahasiswa('Muhammad Dandri Handian', 20);
+    // let ahdan = new Mahasiswa('Ahdan Naufal Y', 25);
+
+// // 4. object.create
+    // const methodMahasiswa = {
+    //     ujian : function(hasil){
+    //         this.nilai += hasil;
+    //         console.log(`Hallo ${this.nama}, nilai anda ${this.nilai}`);
+    //     },
+    //     bolos : function(jam){
+    //         this.nilai -= jam;
+    //         console.log(`Hallo ${nama}, karena anda membolos maka nilai anda berkurang menjadi ${this.nilai}`)
+    //     }
+
+    // }
+    // function mahasiswa(nama, nilai){
+    //     let mahasiswa = Object.create(methodMahasiswa);
+    //     mahasiswa.nama = nama;
+    //     mahasiswa.nilai = nilai;
+
+       
+    //     return mahasiswa;
+    // }
+
+    // let dandri = mahasiswa('Muhammad Dandri Handian', 20);
+    // let ahdan = mahasiswa('Ahdan Naufal Y', 25);
+
+
+
+
+    // let mahasiswa = {
+    //     nama : 'Muhammad Dandri Handian',
+    //     jurusan : 'Teknik Informatika',
+    //     ipk : 3.1,
+    //     ipks : function (ip){
+    //         this.ipk = (this.ipk + ip) / 2;
+    //         console.log(this.ipk)
+    //     }
+    // }
+    // console.log(mahasiswa);
+
+
+    function mahasiswa(nama, energi){
+        let mahasiswa = {};
+        mahasiswa.nama = nama,
+        mahasiswa.energi = energi,
+        mahasiswa.makan = function(porsi){
+            this.energi = this.energi + porsi
+            console.log(`Energi bertambah menjadi ${this.energi}`)
+        }
+        mahasiswa.malas = function(jam){
+            this.energi = this.energi - jam;
+            console.log(`Energi berkurang menjadi ${this.energi}`)
+        }
+        return mahasiswa;
+    }
+
+    let mahasiswa1 = new mahasiswa('Muhammad Dandri Handian', 85);
+
+
+    function mahasiswa(nama, energi){
+        this.nama = nama,
+        this.energi = energi,
+        this.makan = function(porsi){
+            this.energi = this.energi + porsi
+            console.log(`Energi bertambah menjadi ${this.energi}`)
+        }
+        this.malas = function(jam){
+            this.energi = this.energi - jam;
+            console.log(`Energi berkurang menjadi ${this.energi}`)
+        }
+    }
+
+    let mahasiswa2 = new mahasiswa('Maman Abdurahma', 65);
+</script>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi Array</title>
+</head>
+<body>
+
+<script>
+    // var arr = ['satu', 'dua', 'tida'];
+    // console.log(arr);
+
+    //menambah array
+    // var arr = [];
+    // arr[0] = 'lawrensa'
+    // arr[1] = 'dandri';
+    // arr[2] = 'handian';
+    // arr[3] = 'lala';
+    // arr[5] = 'berta';
+    // console.log(arr[3]);
+
+    //menghapus isi array
+    // var arr = ['dandri', 'handian', 'lala'];
+    // arr[2] = undefined;
+    // console.log(arr);
+
+     //menampilkan array yg benar
+    // var arr = ['muhammad', 'dandri', 'handian'];
+    // for (var i = 0; i < 3; i++){
+    //     console.log(arr[i]);
+    // }
+
+    //method pada array
+    // 1. length
+    // 2. join
+    // var arr = ['dandri', 'handian', 'ganteng'];
+    // console.log(arr.join(', '))
+
+    // 3. push (tambah diakhir) & pop (menghilangkan diakhir)
+    // var arr = ['dandri', 'handian', 'ganteng'];
+    // arr.push('ari', 'lala');
+    // arr.pop();
+    // alert(arr);
+
+    // 4. unshift (tambah diawal) & shift (hapus diawal)
+    // var arr = ['dandri', 'handian', 'ganteng'];
+    // arr.unshift('aliudin');
+    // arr.shift();
+    // alert(arr)
+
+    // 5. splice (menambah&&menghapus ditengah)
+    // splice (indexAwal, mauDihapusBerapa, elemenBaru, elemenBaru, ..)
+    // var arr = ['dandri', 'handian', 'ganteng'];
+    // arr.splice(1, 2, 'adit', 'dian');
+    // alert(arr);
+
+    // 6. slice (mengambil/mengiris array)
+    // slice(awal, akhir)
+    // var arr = ['dandri', 'handian', 'ganteng', 'ali'];
+    // alert(arr.splice(1, 3))
+
+    // 7. forEach
+    // cara biasa
+    // var angka = [1,2,3,4,5,6,7,8];
+    // // for(var i = 0; i < angka.length; i++){
+    // //     console.log(angka[i]);
+    // // }
+    // //pake forEach
+    // angka.forEach(function(e){
+    // console.log(e);
+    // });
+
+    // 8. map
+    // var angka = [1,2,3,4,5,6,7,8];
+    // var angka2 = angka.map(function(e){
+    //     return e * 2;
+    // });
+    // console.log(angka2);
+
+    // 9. sort
+    // var angka = [10,2,33,43,51,6,74,8];
+    // angka.sort(function(a,b) {
+    //     return a-b;
+    // });
+    // console.log(angka);
+
+    // 10. filter(mencari banyak nilai) & find(hanya menampilkan satu nilai)
+    var angka = [10,2,33,43,51,6,74,8];
+    var angka2 = angka.find(function(x){
+        return x > 6
+    });
+    console.log(angka2);
+
+</script>
+</body>
+</html>
