@@ -7,12 +7,15 @@
     <style>
         html, body {
             height: 100%;
+            margin: 0;
+            padding: 0;
         }
         body {
             text-align: center;
         }
-        .biru-muda {
-            background-color: lightblue;
+        .black {
+            background-color: black;
+            color: white;
         }
         .kotak {
             width: 25px;
@@ -28,20 +31,33 @@
         .biru {
             background-color: blue;
         }
+
+        #tiga, #dua {
+            height:100%;
+        }
     </style>
 </head>
 <body>
-    <h1>Bermain dengan Warna</h1>
-    <button type="button">Ubah Warna</button>
-    <br><br>
-    <div class="kotak merah"></div>
-    <input type="range" name="sMerah" min="0" max="255">
+    <div id="satu">
+        <h1>Bermain dengan Warna</h1>
+        <button type="button">Ubah Warna</button>
+    </div>
     <br>
-    <div class="kotak hijau"></div>
-    <input type="range" name="sHijau" min="0" max="255">
-    <br>
-    <div class="kotak biru"></div>
-    <input type="range" name="sBiru" min="0" max="255">
+    <div id="dua">
+        <div class="kotak merah"></div>
+        <input type="range" name="sMerah" min="0" max="255">
+        <br>
+        <div class="kotak hijau"></div>
+        <input type="range" name="sHijau" min="0" max="255">
+        <br>
+        <div class="kotak biru"></div>
+        <input type="range" name="sBiru" min="0" max="255">
+    </div>
+    <div id="tiga">
+        <hr>
+        <h1>Geser cursor untuk mengubah warna</h1>
+    </div>
+    
 
 <script src="script.js"></script>
 </body>
