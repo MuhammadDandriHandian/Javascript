@@ -43,7 +43,7 @@ p4.style.backgroundColor = 'lightBlue'
 const li2 = document.querySelector('#b ul li:nth-child(2)');
 li2.style.fontSize = '30px'
 
-// document.querySelectorAll()
+// document.querySelectorAll() untuk mengambil semua selector
 const scsn = document.querySelectorAll('section');
 scsn[0].style.backgroundColor = 'yellow';
 
