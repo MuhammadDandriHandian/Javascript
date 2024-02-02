@@ -32,7 +32,7 @@
    
 // }
 
-// atau pake forEach
+// atau pake forEach = untuk looping
 const close = document.querySelectorAll('.close');
 close.forEach(function(el) {
     el.addEventListener('click', function(e){
