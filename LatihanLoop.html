@@ -8,22 +8,39 @@
 <body>
    
 <script>
-    var s = '';
-    var x = '';
-    for (i=5; i>=1; i--){
-        for (j=1; j<=i; j++){
-            s += '*';
+    // var s = '';
+    // var x = '';
+    // for (i=5; i>=1; i--){
+    //     for (j=1; j<=i; j++){
+    //         s += '*';
+    //     }
+    //     s += '\n';
+    // }
+    // for (k=1; k<=5; k++){
+    //     for (l=1; l<=k; l++){
+    //         x += '*';
+    //     }
+    //     x += '\n';
+    // }
+    // console.log(s);
+    // console.log(x);
+
+    function cetakSegitigaSiku(n) {
+    let x = ''; 
+
+    for (let i = 1; i <= n; i++) {
+        for (let k = 1; k <= n - i; k++){
+            x += ' ';
         }
-        s += '\n';
-    }
-    for (k=1; k<=5; k++){
-        for (l=1; l<=k; l++){
+        for (let j = 1; j <= i; j++) {
             x += '*';
         }
         x += '\n';
     }
-    console.log(s);
-    console.log(x);
+
+    return x; 
+}
+console.log(cetakSegitigaSiku(4))
     
 
 </script>    

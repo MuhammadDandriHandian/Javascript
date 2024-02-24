@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // // cetak nama 
+    // let nama = "M Dandri Handian";
+    // let umur = 23;
+    // let domisili = "Cianjur";
+
+    // console.log (`Perkenalkan nama saya ${nama}, umur saya ${umur}, domisili saya ${domisili}`)
+
+    // // buat variable panjang dengan nilai 5, lebar 7 untuk menentukan luas persegi panjang. Buat variable luas persegi panjang untuk menyimpan hasi dari rumus persegi panjang
+    // let panjang = 2;
+    // let lebar = 7;
+    // let luasPersegiPanjang;
+
+    // luasPersegiPanjang = panjang * lebar;
+
+    // console.log(luasPersegiPanjang);
+
+    // // hitung umur dengan membuat variabel tahun lahir dan tahun sekarang. kemudian simpan hasil perhitungan di dalam variabel umur. Hasil => "saya lahir tahun 2000 karenan sekarang tahun 2022 maka umur saya 22 tahun"
+    // let tahunLahir = 2000;
+    // let sekarang = new Date()
+    // let tahunSekarang = sekarang.getFullYear();
+    // let umurr = tahunSekarang - tahunLahir;
+
+    // console.log(`Saya lahir di tahun ${tahunLahir} karena sekarang tahun ${tahunSekarang}, maka saya umur ${umur}`);
+
+    // //lampu menyala setiap 5 detik, untuk menyala sebanyak 48x berapa menit dibutuhkan? Hasil => "DIbutuhkan waktu 4 menit untuk menyala sebanyak 48 kali"
+
+    // function hitungLampu(n){
+    //     lampu = 5;
+    //     hitung = lampu * n;
+    //     menyala = hitung / 60;
+    //     output = `Dibutuhkan waktu ${menyala} menit untuk menyala sebanyak ${n} kali`;
+    //     return output;
+    // }
+    // console.log(hitungLampu(47));
+
+    // // mencetak perkalian sesuai yang diinputkan oleh user. contoh input = 2 makan output 2 x 1 = 1, 2 x 2 = 4, 2 x 3 = 6, dst
+
+    // function perkalian(n){
+    //     let hasil = "";
+    //     for (let i = 1; i <= 10; i++){
+    //         hasil = hasil + `${n} * ${i} = ${n * i}\n`;
+        
+    //         return hasil;
+    //     }
+    // }
+
+    // console.log(perkalian(2));
+
+    function array(arr){
+        return arr.map((num, index) => {
+            if (index % 2 == 0){
+                return num * 2;
+            } else {
+                return Math.floor(num / 2);
+            }
+        });
+    }
+     
+    console.log(array([1,2,3,4,5]));
+
+
+
+    function aturanArray(arr) {
+    const hasil = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+            hasil[i] = arr[i] * 2;
+        } else {
+            hasil[i] = arr[i - 1] + 1;
+        }
+    }
+    return hasil;
+}
+
+console.log(aturanArray([1, 2, 3, 4, 5]));
+
+
+
+
+
+   
+
+</script>
+</body>
+</html>
