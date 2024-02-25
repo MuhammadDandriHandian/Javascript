@@ -9,25 +9,42 @@
 
 <script>
     // while dihentikan oleh user
-    // var ulang = true;
-    // while (ulang) {
-    //     console.log("Hello World");
-    //     ulang = confirm("Lagi?");
-    // }
-
-    //while dihentikan oleh sistem
-    // var ulang = 1;
-    // while (ulang <= 1000) {
-    //     console.log("Hello World");
-    //     ulang++;
-    // }
-
-    //while dihentikan oleh sistem dengan nomor
-    var ulang = 1;
-    while (ulang <= 1000) {
-        console.log("Hello World " + ulang);
-        ulang++;
+    // code akan mencetak hello world lalu akan muncul alert konfirmasi dengan confirm yg berisi ya atau tidak, bila ya hello world akan dicetak lagi, bila tidak maka akan keluar dari pengulangan
+    let ulang = true;
+    while (ulang) {
+        alert("Hello World");
+        ulang = confirm("Lagi?");
     }
+
+    // //while dihentikan oleh sistem
+    // pengulangan akan terus berjalan hingga nilai awal kurang dari sama dengan 10
+    let nilaiAwal = 1;
+    while (nilaiAwal <= 10) {
+        console.log("Hello World");
+        nilaiAwal++;                    
+    }
+
+    // //while dihentikan oleh sistem dengan nomor
+    // akan mencetak hello world ditambah operator concat isi variable kondisi, sehingga akan memunculkan angka berurut pada setiap hello world
+    let kondisi = 1;
+    while (kondisi <= 1000) {
+        console.log("Hello World " + kondisi);
+        kondisi++;
+    }
+
+    // latihan menampilkan 10 angkot yang sedang beroperasi
+    let noAngkot = 1
+    let jmlAngkot = 10
+
+    while (noAngkot <= jmlAngkot){
+        console.log(`Angkot ${noAngkot} beroperasi dengan baik`);
+        noAngkot++;
+    }
+
+
+
+
+
 </script>
 </body>
 </html>

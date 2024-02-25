@@ -8,9 +8,20 @@
 <body>
 
 <script>
-    // mencetak hello world sebanyak 10 baris dan ditambah nilai yang awalnya 1 hingga 10
+    // mencetak hello world sebanyak 10 baris dan ditambah nilai yang awalnya 1 hingga 10. for(nilai awal; kondisi; increment/decrement)
     for(var nilai = 1; nilai <= 10; nilai++) {
         console.log("Hello World " + nilai)
+    }
+
+    // latihan menampilkan 10 angkot dimana angkot 1-6 beroperasi dengan baik dan 7-10 tidak beroperasi.
+    let jmlAngkot = 10;
+    let angkotBeroperasi = 6;
+
+    for (let noAngkot = 1; noAngkot <= angkotBeroperasi; noAngkot++){
+        console.log(`Angkot no. ${noAngkot} beroperasi dengan baik`);
+    }
+    for (noAngkot = angkotBeroperasi + 1; noAngkot <= jmlAngkot; noAngkot++){
+        console.log(`Angkot no. ${noAngkot} tidak dapat beroperasi`);
     }
 </script>
 </body>

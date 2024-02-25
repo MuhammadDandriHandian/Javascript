@@ -8,12 +8,40 @@
 <body>
 
 <script>
-    var angka = 5;
+    // menentukan bilangan genap/ganjil
+    // if else hanya terdapat satu kondisi
+    // dengan menginisialisasi variable angka = 5 jika kondisi terpenuhi yaitu 5 mod 2 = 2 maka aksi pertama akan dijalankan, bila kondisi bernilai salah maka aksi kedua yang akan dijalankan
+    let angka = 5;
     if (angka % 2 == 0) {
         console.log("Angka " + angka + " adalah bilangan genap")
     } else {
         console.log("Angka " + angka + " adalah bilangan ganjil")
     }
+
+    // menentukan nilai kelulusan mahasiswa yang diinputkan oleh user secara berulang
+    // prompt untuk memasukan nilai oleh user, confirm untuk memberi konfirmasi ya atau tidak, karena confirm ditulis di dalam while maka promt akan terus mucul sampai user memilih opsi tidak
+    let ulang = true;
+    while (ulang){
+        let nilai = prompt("Masukan nilai mahasiswa : ");
+        if (nilai > 60) {
+            console.log("Lulus");
+        } else {
+            console.log("Tidak lulus");
+        }
+        ulang = confirm("Ingin masukan nilai lagi?")
+    }
+
+    // latihan angkot 1-6 beroperasi baik 7-10 tidak beroperasi menggunakan for dan if else
+    let jmlAngkot = 10;
+    let beroperasi = 6;
+    for (let noAngkot = 1; noAngkot <= jmlAngkot; noAngkot++){
+        if (noAngkot <= beroperasi){
+            console.log(`Angkot no. ${noAngkot} beroperasi dengan baik`);
+        } else {
+            console.log(`Angkot no. ${noAngkot} tidak dapat beroperasi`);
+        }
+    }
+
 </script>    
 </body>
 </html>

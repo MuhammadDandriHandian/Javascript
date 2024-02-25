@@ -8,7 +8,10 @@
 <body>
 
 <script>
+    // menentukan angka ganjil genap
+    // jika input adalah habis dibagi 2 maka "genap", jika input tidak habis dibagi 2 maka "ganjil", jika input bukan angka maka "bukan angka"
     var angka = prompt("Masukan angka: ");
+
     if (angka % 2 == 0){
         alert("Angka " + angka + " adalah bilangan genap");
     } else if (angka % 2 == 1){
@@ -16,6 +19,53 @@
     } else {
         alert("Yang anda masukan bukan angka");
     }
+
+    // latihan angkot dimana terdapat 10 angkot dimana hanya 6 angkot yang beroperasi dan angkot 8 sedang lembur
+    let jmlAngkot = 10;
+    let beroperasi = 6
+    let lembur = 8;
+
+    for (let noAngkot = 1; noAngkot <= jmlAngkot; noAngkot++){
+        if (noAngkot <= beroperasi){
+            console.log(`Angkot no ${noAngkot} sedang beroperasi`);
+        } else if (noAngkot == lembur){
+            console.log(`Angkot no ${noAngkot} sedang lembur`);
+        } else {
+            console.log(`Angkot no ${noAngkot} sedang tidak dapat beroperasi`);
+        }
+    }
+
+    // bila yang lembur bus 8 dan bus 10
+    // bisa menggunakan operator logika atau (||), atau tambah else if lagi untuk angkot lembur no 10
+    let jmlBus = 10;
+    let busBeroperasi = 6
+
+    for (let noBus = 1; noBus <= jmlAngkot; noBus++){
+        if (noBus <= beroperasi){
+            console.log(`Bus no ${noBus} sedang beroperasi`);
+        } else if (noBus == 8 || noBus == 10){
+            console.log(`Bus no ${noBus} sedang lembur`);
+        } else {
+            console.log(`Bus no ${noBus} sedang tidak dapat beroperasi`);
+        }
+    }
+
+    // atau bisa juga variable lemburnya menggunakan array dan menggunakan method include, sehingga tidak harus mengguanakan operator logika yang panjang bila lemburnya lebih dari dua
+    // method include adalah method yg ada pada tipe data array untuk memeriksa apakah suatu nilai ada di array tsb atau tidak
+    let jmlTruk = 10;
+    let trukBeroperasi = [1,2,5];
+    let trukLembur = [6,8,10,7];
+
+    for (let noTruk = 1; noTruk <= jmlTruk; noTruk++){
+        if (trukBeroperasi.includes(noTruk)){
+            console.log(`Truk no. ${noTruk} sedang beroperasi`)
+        } else if (trukLembur.includes(noTruk)){
+            console.log(`Truk no. ${noTruk} sedang lembur`)
+        } else {
+            console.log(`Truk no ${noTruk} sedang tidak bisa beroperasi`)
+        }
+    }
+
 </script>
 </body>
 </html>
