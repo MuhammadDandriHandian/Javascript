@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // mencetak 1 bintang sebanyak 5 baris
+        for (let i = 0; i < 5; i++){
+            console.log("*");
+        }
+
+        // mencetak 5 bintang dalam 1 baris
+        let bintang = "";
+        for (let a = 0; a < 5; a++){
+            bintang += "*";
+        }
+        console.log(bintang);
+
+        // mencetak 1 bintang dalam 5 baris
+        let b = "";
+        for (let c = 0; c < 5; c++){
+            b += "*";
+            b += "\n";
+        }
+        console.log(b);
+
+        // mencetak 5 bintang dalam 5 baris
+        let z = ""
+        for (let d = 0; d < 5; d++){
+            for (let f = 0; f < 5; f++){
+                z += "*";
+            }
+            z += "\n";
+        }
+        console.log(z);
+
+        // mencetak bintang sesuai baris, baris satu maka satu bintang dan baris dua maka dua bintang dan seterusnya
+        let y = "";
+        for (let g = 1; g <= 5; g++){
+            for (let h = 0; h < g; h++){
+                y += "*";
+            }
+            y += "\n";  
+        }
+        console.log(y);
+        
+
+    </script>
+    
+</body>
+</html>
