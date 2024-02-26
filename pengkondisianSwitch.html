@@ -7,44 +7,66 @@
 </head>
 <body>
 <script>
-    // var nama = prompt("Masukan nama: ");
-    // switch (nama){
-    //     case 'dandri':
-    //         alert("Hi bos ganteng");
-    //         break;
-    //     case 'handian':
-    //         alert("Hi bos ganteng")
-    //         break;
-    //     case 'lala':
-    //         alert("Hi bos cantik");
-    //         break;
-    //     case 'berta':
-    //         alert("Hi bos cantik")
-    //         break;
-    //     case 'yusdi':
-    //         alert("Hi bos galak");
-    //         break;
-    //     default:
-    //         alert("Nama anda tidak terdaftar");
-    // }
+    /* Aturan dalam switch
+        switch (ekspresi) {
+            case "nilai 1":
+                aksi 1
+            break;
+            case "nilai 2":
+                aksi 2
+            break;
+            case "nilai n":
+                aksi n
+            break;
+            default:
+                aksi default
+            break;
+        }
+        - Keyword break dipakai agar setelah aksi 1 dijalankan maka pengkondisian akan keluar dari switchnya (ada saatnya tidak menggunakan break), jika semua nilai tidak terpenuhi maka akan masuk ke aksi default.
 
-    //cara yg lebih efektif, bila alertnya sama
-    var nama = prompt("Masukan nama: ");
-    switch (nama){
-        case 'dandri':
-        case 'handian':
-            alert("Hi bos ganteng")
-            break;
-        case 'lala':
-        case 'berta':
-            alert("Hi bos cantik")
-            break;
-        case 'yusdi':
-            alert("Hi bos galak");
-            break;
-        default:
-            alert("Nama anda tidak terdaftar");
+        - Dalam switch tidak bisa memasukan kondisi, tapi harus nilainya langsung
+    */
+    // ketika menggunakan promt maka user memasukan tipe datanya string walaupun menginput angka, untuk memaksa angka yg dimasukan menjadi integer gunakan parseInt contoh parseInt(prompt('masukan angka :'));
+   
+    // identifikasi makanan sehat/tidak sehat
+    let makanan = prompt("Masukan makanan : \n contoh : nasi, daging, kentang, mie");
+
+    switch (makanan) {
+        case 'nasi':
+            alert ('Nasi adalah makanan sehat bila tidak dikonsumsi berlebih');
+        break;
+        case 'daging':
+            alert ("Daging adalah makanan sehat, namun harus disesuaikan dengan kebutuhan");
+        break;
+        case 'kentang':
+            alert ("Kentang adalah makanan sehat, namun dengan pengolahan yang baik");
+        break;
+        case 'mie' :
+            alert ("Mie adalah makanan tidak sehat bila dikonsumis berlebih");
+        break;
+        default :
+            alert ("Yang anda masukan bukan makanan");
+        break;
     }
+
+    // tidak menggunakan break (sebenernya lebih efektif) untuk menngurangi baris code bila aksinya sama
+
+    let minuman = prompt("Masukan minuman \n contoh : coca cola, jus jeruk, wedang jaeh, anggur merah");
+
+    switch (minuman){
+        case "coca cola":
+        case "anggur merah":
+            alert ("Yang anda masukan adalah minuman tidak sehat");
+        break;
+        case "jus jeruk":
+        case "wedang jahe": 
+            alert ("Yang anda masukan minuman sehat, bila dikonsumsi sesuai takarannya");
+        break;
+        default: 
+            alert ("Yang anda masukan bukan minuman");
+        break;
+    }
+   
 
 </script>   
 </body>
