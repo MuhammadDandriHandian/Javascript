@@ -8,119 +8,156 @@
 <body>
 
 <script>
-    var a = 5
-    var b = 5
 
-    volumeA = a * a * a;
-    volumeB = b * b * b;
-    totalVolume = volumeA + volumeB;
+    /*
+    FUNCTION
+    - Adalah kunci utama pada javascript yang membuat javascript powerfull, method, class, cunsturtore, module bisa dilakuakn dengan function.
+    - Merupakan struktur dasar pembentuk dari javascript
+    - Kategori function ada dua yaitu built-in function yaitu fucntion yang telah dibuatkan oleh javascript seperti alert(), confirm(), prompt()
+    - atau untuk string ada chartAt(), slice(), split(), toString(), toLowerCase(), toUpperCase(), dll
+    - atau untuk math ada sin(), cos(), tan(), random(), dll
+    - atau date ada now(), getDate(), setDate(), getDay(), dll
+    dan user defined function adalah function yang dibuat sendiri oleh user
+
+    CARA MEMBUAT FUNCTION
+    1. Dengan deklarasi / function declaration
+    2. Dengan ekspresi / function expression
+
+    */
     
-    alert(totalVolume);
+    // function declaration 
+    // membuat function penjumlahan dua bilangan
+    function jumlahDuaBilangan(a,b){
+        let total;
+        total = a + b;
+        return total;
+    }
+    // cara panggil
+    console.log(jumlahDuaBilangan(3,4)); // output : 7
 
-    // PAKE FUNCTION
-    function volume(kubus,kubus2){
+    // function expression
+    let jmlahDuaBilangan = function(a,b){
+        let hasil;
+        hasil = a + b;
+        return hasil;
+    }
+    console.log(jmlahDuaBilangan(4,3)); // output : 7
+
+//     // contoh - contoh function
+//     // Menghitung volume
+//     var a = 5
+//     var b = 5
+
+//     volumeA = a * a * a;
+//     volumeB = b * b * b;
+//     totalVolume = volumeA + volumeB;
+    
+//     alert(totalVolume);
+
+//     // PAKE FUNCTION
+//     function volume(kubus,kubus2){
         
-        return (kubus * kubus * kubus) + (kubus2 * kubus2 * kubus2);
+//         return (kubus * kubus * kubus) + (kubus2 * kubus2 * kubus2);
 
-    }
-    alert(volume(5,5));
-    alert(volume(6,5));
-    alert(volume(3,2));
+//     }
+//     alert(volume(5,5));
+//     alert(volume(6,5));
+//     alert(volume(3,2));
 
-    // GABUNG FUNCTION
-    function kali(a,b){
-        return a * b;
-    }
-    function tambah(c,d){
-        return c + d;
-    }
+//     // GABUNG FUNCTION
+//     function kali(a,b){
+//         return a * b;
+//     }
+//     function tambah(c,d){
+//         return c + d;
+//     }
     
-    var c = parseInt(prompt('Masukan nilai 1 : '));
-    var d = parseInt(prompt('Masukan nilai 2 : '));
-    hasil = kali(tambah(c,d), tambah(c,d));
-    alert(hasil);
+//     var c = parseInt(prompt('Masukan nilai 1 : '));
+//     var d = parseInt(prompt('Masukan nilai 2 : '));
+//     hasil = kali(tambah(c,d), tambah(c,d));
+//     alert(hasil);
 
 
-   // Fungsi untuk menghitung pangkat
-    function pangkat(a,b){
-        return a ** b;
-    }
-    alert(pangkat(2,4));
+//    // Fungsi untuk menghitung pangkat
+//     function pangkat(a,b){
+//         return a ** b;
+//     }
+//     alert(pangkat(2,4));
 
 
-    // contoh fungsi untuk suatu pembayaran
-    function pembayaran(pemakaian){
-    var pertama = 1000;
-    var berikutnya = 1500;
-    var berikutnya15 = 2000;
-    var selebihnya = 3000;
+//     // contoh fungsi untuk suatu pembayaran
+//     function pembayaran(pemakaian){
+//     var pertama = 1000;
+//     var berikutnya = 1500;
+//     var berikutnya15 = 2000;
+//     var selebihnya = 3000;
 
-    var totalBayar = 0;
+//     var totalBayar = 0;
 
-    if (pemakaian <= 10){
-        totalBayar = pemakaian * pertama;
-    } else if (pemakaian <= 20){
-        totalBayar = (10 * pertama) + ((pemakaian - 10) * berikutnya);
-    } else if (pemakaian <= 35){
-        totalBayar =  (10 * pertama) + (10 * berikutnya) + ((pemakaian - 20) * berikutnya15);
-    } else {
-        totalBayar = (10 * pertama) + (10 * berikutnya) + (15 * berikutnya15) + ((pemakaian - 35) * selebihnya);
-    }
-    return totalBayar;
-    }
+//     if (pemakaian <= 10){
+//         totalBayar = pemakaian * pertama;
+//     } else if (pemakaian <= 20){
+//         totalBayar = (10 * pertama) + ((pemakaian - 10) * berikutnya);
+//     } else if (pemakaian <= 35){
+//         totalBayar =  (10 * pertama) + (10 * berikutnya) + ((pemakaian - 20) * berikutnya15);
+//     } else {
+//         totalBayar = (10 * pertama) + (10 * berikutnya) + (15 * berikutnya15) + ((pemakaian - 35) * selebihnya);
+//     }
+//     return totalBayar;
+//     }
 
-    alert(pembayaran(45));
+//     alert(pembayaran(45));
 
-    // FUNCTION LIER
-    function generatePattern(a) {
-       for (var i = 0; i < a; i++) {
-           if (i % 2 === 0) {
-                console.log(" ".repeat(a - i - 1) + "@".repeat(2 * i + 1));
-            } else {
-                console.log(" ".repeat(a - i - 1) + "#".repeat(2 * i + 1));
-            }
-        }
-    }
-    console.log(generatePattern(5));
+//     // FUNCTION LIER
+//     function generatePattern(a) {
+//        for (var i = 0; i < a; i++) {
+//            if (i % 2 === 0) {
+//                 console.log(" ".repeat(a - i - 1) + "@".repeat(2 * i + 1));
+//             } else {
+//                 console.log(" ".repeat(a - i - 1) + "#".repeat(2 * i + 1));
+//             }
+//         }
+//     }
+//     console.log(generatePattern(5));
 
-    // function gempa bumi
-    function gempa(sr){
-        if (sr < 5.0){
-            return "Tidak ada kerusakan, jika ada hanya kerusakan kecil"
-        } else if (sr >= 5.0 && sr < 5.5){
-            return "Beberapa banguna akan rusak!"
-        } else if (sr >= 5.5 && sr < 6.5){
-            return "Tembok retak atau roboh"
-        } else if (sr >= 6.5 && sr < 7.5){
-            return "Bahaya! banyak banguna dan gedung roboh"
-        } else {
-            return "Sangat bahaya! banyak banguna dan gedung hancur"
-        }
-    }
-    alert(gempa(5.3));
+//     // function gempa bumi
+//     function gempa(sr){
+//         if (sr < 5.0){
+//             return "Tidak ada kerusakan, jika ada hanya kerusakan kecil"
+//         } else if (sr >= 5.0 && sr < 5.5){
+//             return "Beberapa banguna akan rusak!"
+//         } else if (sr >= 5.5 && sr < 6.5){
+//             return "Tembok retak atau roboh"
+//         } else if (sr >= 6.5 && sr < 7.5){
+//             return "Bahaya! banyak banguna dan gedung roboh"
+//         } else {
+//             return "Sangat bahaya! banyak banguna dan gedung hancur"
+//         }
+//     }
+//     alert(gempa(5.3));
     
-    // function faktorial
-    function faktorial(a){
-        if (a == 1 || a == 0){
-            return 1;
-        }
-        return a * faktorial(a-1);
-    }
-    alert(faktorial(0));
+//     // function faktorial
+//     function faktorial(a){
+//         if (a == 1 || a == 0){
+//             return 1;
+//         }
+//         return a * faktorial(a-1);
+//     }
+//     alert(faktorial(0));
 
-    // function hitung ipk
-    var nama = 'Muhammad Dandri Handian';
-    var umur = 23;
-    var ip = [4,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,4,3,3,4,2,3,3,2,3,3,2,3,3,3,3,3,3,3,2,3,3,3,2,3,3,3,2,3,3,3,3,2,2,2,3,3,3,5];
+//     // function hitung ipk
+//     var nama = 'Muhammad Dandri Handian';
+//     var umur = 23;
+//     var ip = [4,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,4,3,3,4,2,3,3,2,3,3,2,3,3,3,3,3,3,3,2,3,3,3,2,3,3,3,2,3,3,3,3,2,2,2,3,3,3,5];
 
-    function hitungIPK(ip){
-        var total = 0;
-        for(var i = 0; i < ip.length; i++){
-            total += ip[i];
-        }
-        return total/ip.length
-    }
-    console.log(nama + ', dengan usia ' + umur + ' tahun lulus dengan ipk ' + hitungIPK(ip));
+//     function hitungIPK(ip){
+//         var total = 0;
+//         for(var i = 0; i < ip.length; i++){
+//             total += ip[i];
+//         }
+//         return total/ip.length
+//     }
+//     console.log(nama + ', dengan usia ' + umur + ' tahun lulus dengan ipk ' + hitungIPK(ip));
 
 
 </script>
