@@ -63,6 +63,17 @@
     }
     console.log(hitungVolumeDuaKubus(2,3)); // output : 35
     console.log(hitungVolumeDuaKubus(5,9)); 
+
+    // function penjumlahan tanpa menambahkan inputan(parameter) di dalam nama function
+    // argument.length = agar i kurang dari isi parameter yg user akan masukan, length akan menghitung berapa isi parameter yang dimasukan user
+    function tambah(){
+        let hasil = 0;
+        for(let i = 0; i < arguments.length; i++){
+            hasil += arguments[i];
+        }
+        return hasil;
+    }
+    console.log(tambah(1,2,3,4,5));
     
     // menggabungkan dua buah function
     // function mengkali dua buah bilangan
