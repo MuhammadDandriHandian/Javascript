@@ -8,56 +8,76 @@
 <body>
 
 <script>
-    // var arr = ['satu', 'dua', 'tida'];
-    // console.log(arr);
+    /* ARRAY
+    - Adalah tipe data yang digunakan untuk mendeskripsikan kumpulan elemen (nilai atau variabel) ang tiap tiap elemenya memiliki index.
+    - Adalah variable yang lebih sakti, karena bisa menampung lebih dari satu nilai
+    - Mempermudah pengelolaan nilai/value/data
+    - Manajemen memori
+    - Array pada javascript bertipe objek
+    - Pada js elemennya boleh memiliki tipe data yang beda
+    */
+    // Penulisan array
+    let hari = ["Senin", "Selasa", "Rabu", "Kamis"];
+    console.log(hari);
+    console.log(hari[2]); // Akan memunculkan isi array index ke 2. output : Rabu
 
-    // menambah array
-    // var arr = [];
-    // arr[0] = 'lawrensa'
-    // arr[1] = 'dandri';
-    // arr[2] = 'handian';
-    // arr[3] = 'lala';
-    // arr[5] = 'berta';
-    // console.log(arr);
+    /* ARRAY MULTI DIMENSI
+    - Adalah array yang didalamnya ada array
+    contoh :
+    */
+    let arr = ["Januari", "Februari", ["Senin", "Selasa", "Rabu"]];
+    console.log(arr[2][1]); // output : Selasa
 
-    //menghapus isi array
-    // var arr = ['dandri', 'handian', 'lala'];
-    // arr[2] = undefined;
-    // console.log(arr);
+    // MANIPULASI ARRAY
+    // 1. menambah array manual
+    // indexnya harus berurtan, klo tidak nanti diisi dengan 'undefined'
+    var nama = [];
+    arr[0] = 'udin'
+    arr[1] = 'dandri';
+    arr[2] = 'handian';
+    arr[3] = 'ujang';
+    arr[5] = 'cecep';
+    console.log(arr);
 
-     //menampilkan array yg benar
-    // var arr = ['muhammad', 'dandri', 'handian'];
-    // for (var i = 0; i < 3; i++){
-    //     console.log(arr[i]);
-    // }
+    // 2. menghapus isi array manual
+    // mengubah menjadi 'undefined'
+    let mahasiswa = ['dandri', 'handian', 'ahmad'];
+    mahasiswa[2] = undefined;
+    console.log(arr);
 
-    //METHOD PADA ARRAY
+    // 3. menampilkan array yg benar 
+    let siswa = ['muhammad', 'dandri', 'handian'];
+    for (let i = 0; i < 3; i++){
+        console.log(siswa[i]);
+    }
+
+    // METHOD PADA ARRAY
         // 1. length
         // Untuk mengetahui jumlah yang ada pada suatu array
-        // let namaMahasiswa = ["Dandri", "Daffa", "Handian", "Lala", "Berta"];
-        // console.log(namaMahasiswa.length);      // output = 5
+        let namaMahasiswa = ["Dandri", "Daffa", "Handian"];
+        console.log(namaMahasiswa.length);      // output = 3
 
         // 2. join
-        // var arr = ['dandri', 'handian', 'ganteng'];
-        // console.log(arr.join(', '))
+        var concat = ['dandri', 'handian', 'daffa'];
+        console.log(concat.join(', ')); // output : dandri, handian, daffa
 
         // 3. push (tambah diakhir) & pop (menghilangkan diakhir)
-        // var arr = ['dandri', 'handian', 'ganteng'];
-        // arr.push('ari', 'lala');
-        // arr.pop();
-        // alert(arr);
+        var hapus = ['dandri', 'handian', 'daffa'];
+        hapus.push('ari', 'ronaldo');
+        hapus.pop();
+        alert(hapus);
 
         // 4. unshift (tambah diawal) & shift (hapus diawal)
-        // var arr = ['dandri', 'handian', 'ganteng'];
-        // arr.unshift('aliudin');
-        // arr.shift();
-        // alert(arr)
+        var a = ['dandri', 'handian', 'ganteng'];
+        a.unshift('aliudin');
+        a.shift();
+        alert(a)
 
-        // 5. splice (menambah&&menghapus ditengah)
+        // 5. splice (menambah & menghapus ditengah)
         // splice (indexAwal, mauDihapusBerapa, elemenBaru, elemenBaru, ..)
-        // var arr = ['dandri', 'handian', 'ganteng'];
-        // arr.splice(1, 2, 'adit', 'dian');
-        // alert(arr);
+        var b = ['dandri', 'handian', 'kaka'];
+        b.splice(1, 2, 'adit', 'dian');
+        alert(b);
 
         // 6. slice (mengambil/mengiris array)
         // slice(awal, akhir)
