@@ -77,44 +77,57 @@
         // splice (indexAwal, mauDihapusBerapa, elemenBaru, elemenBaru, ..)
         var b = ['dandri', 'handian', 'kaka'];
         b.splice(1, 2, 'adit', 'dian');
-        alert(b);
+        alert(b);   // output : dandri, adit, dian
 
         // 6. slice (mengambil/mengiris array)
-        // slice(awal, akhir)
-        // var arr = ['dandri', 'handian', 'ganteng', 'ali'];
-        // alert(arr.splice(1, 3))
+        // slice(awal, akhir) 
+        var c = ['dandri', 'handian', 'udin', 'ali'];
+        alert(c.splice(1, 3));  // output : handian, udin
 
         // 7. forEach
         // cara biasa
-        // var angka = [1,2,3,4,5,6,7,8];
-        // // for(var i = 0; i < angka.length; i++){
-        // //     console.log(angka[i]);
-        // // }
-        // //pake forEach
-        // angka.forEach(function(e){
-        // console.log(e);
-        // });
+        var angka = [1,2,3,4,5,6,7,8];
+        for(var i = 0; i < angka.length; i++){
+            console.log(angka[i]);
+        }
+        // pake forEach
+        // menggunakan function expression
+        angka.forEach(function(e){
+        console.log(e);
+        });         // untuk setiap elemet yang ada pada element angka lakukan console log
 
         // 8. map
-        // var angka = [1,2,3,4,5,6,7,8];
-        // var angka2 = angka.map(function(e){
-        //     return e * 2;
-        // });
-        // console.log(angka2);
+        // sama seperti forEach tapi lebih baik karena mengembalikan array
+        var nomor = [1,2,3,4,5,6,7,8];
+        var nomor2 = nomor.map(function(e){
+            return e * 2;
+        });
+        console.log(nomor2);    // output : 2,4,6,8,10,12,14,16
+        // artinya seleuruh elemen akan di kali dua lalu simpan ke variabel nomor2 sebagai array
 
         // 9. sort
-        // var angka = [10,2,33,43,51,6,74,8];
-        // angka.sort(function(a,b) {
-        //     return a-b;
-        // });
-        // console.log(angka);
+        // untuk mengurutkan sebuah array
+        var f = [10,2,33,43,51,6,74,8];
+        f.sort(function(a,b) {
+            return a-b;
+        });
+        console.log(f.join(','));     // output : 2,6,8,10,33,43,51,74
 
-        // 10. filter(mencari banyak nilai) & find(hanya menampilkan satu nilai)
-        // var angka = [10,2,33,43,51,6,74,8];
-        // var angka2 = angka.find(function(x){
-        //     return x > 6
-        // });
-        // console.log(angka2);
+        // 10. filter(mengembalikan banyak nilai) & find(hanya mengembalikan satu nilai)
+        // untuk mencari elemen pada array
+        // filter
+        var angka = [10,2,3,4,5,8,9];
+        var angka2 = angka.filter(function(x){
+            return x > 6
+        });
+        console.log(angka2.join(','));       // output : 10,9,8
+
+        //find
+        var angka = [10,2,3,4,5,8,9];
+        var angka2 = angka.find(function(x){
+            return x > 6
+        });
+        console.log(angka2);       // output : 8
 
         // 11. includes 
         // adalah method untuk memeriksa apakah suatu nilai ada di array tsb atau tidak. Jika nilai tsb ada pada array maka method akan mengembalikan nilai 'true', jika tidak maka 'false'.
