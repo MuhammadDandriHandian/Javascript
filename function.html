@@ -64,6 +64,13 @@
     console.log(hitungVolumeDuaKubus(2,3)); // output : 35
     console.log(hitungVolumeDuaKubus(5,9)); 
 
+    // REFACTORING
+    // Adalah teknik membuat suatu code menjadi lebih efisien
+    function volumeDuaKubus(sisiKubusA, sisiKubusB){
+        return sisiKubusA**3 + sisiKubusB**3;
+    }
+    console.log(volumeDuaKubus(2,3));
+
     // function penjumlahan tanpa menambahkan inputan(parameter) di dalam nama function
     // argument.length = agar i kurang dari isi parameter yg user akan masukan, length akan menghitung berapa isi parameter yang dimasukan user
     function tambah(){
