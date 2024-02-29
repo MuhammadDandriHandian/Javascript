@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Function declarration
+        - Lebih fleksibel (dapat ditulis dimanapun)
+        - Mudah dipahami pemula
+        - Functionnya tidak harus ditulis terlebih dahulu, dapat dipanggil dulu baru tulis functionnya
+        */
+        // function menampilkan pesan nama
+        function tampilPesan(nama) {
+            alert("hallo " + nama)
+        }
+        console.log("Dandri")
+
+        /* Function expression
+        - Harus didefinisikan terlebih dahulu functionnya sebelum dipanggil
+        - Lebih powerful
+        - Dapat dibuat sebagai IIFE
+        */
+        let tampilPesan = function(nama) {
+            alert("hallo " + nama);
+        }
+    </script>
+    
+</body>
+</html>
