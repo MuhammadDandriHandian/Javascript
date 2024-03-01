@@ -11,10 +11,16 @@
     /* OBJEK
      - Adalah kumpulan nilai yang memiliki nama (bukan index)
      - Adalah array yang lebih sakti
+     - Pembuatannya ada 4 cara yaitu:
+       1. Objek literal
+       2. Function Declaration
+       3. Constructor Function (Keyword new)
+       4. Objek.create()
     */
-   
-    // menggunakan object literal
+
+    // 1. Menggunakan object literal
     // membuat data mahasiswa
+    // sebelah kiri itu keynya dan sebelah kanan itu nilainya
     var mhs = {
         nama : 'Muhammad Dandri Handian',
         umur : 23,
@@ -25,18 +31,21 @@
             provinsi : 'Jawa Barat'
         }
     }
+    // jika ingin membuat objek berikutnya tinggal bikin variabel lain dengan nama yang berbeda
     var mhs2 = {
-        nama : 'Berta Lawrensa',
+        nama : 'Agus Harimukti',
         umur : 23,
         ip : [3.3, 3.2, 3.4, 3.1],
         alamat : {
-            jalan : 'Hikmah Budhi',
-            kota : 'Tangerang', 
-            provinsi : 'Banter'
+            jalan : 'Sekeloa Dalam',
+            kota : 'Bandung', 
+            provinsi : 'Jawa Barat'
         }
     }
 
-    // menggunakan function declaration
+    // 2. Membuat objek menggunakan function declaration
+    // libih ringkas dari obj literal karena hanya deklarasi sekali tapi objek bisa dibuat berulang ulang
+    // cukup membuat function pada biasa yang didalamnya berisi objek
     function mahasiswa(nama, umur, ip, alamat){
         var mhs = {};
             mhs.nama = nama,
@@ -49,11 +58,11 @@
             }
             return mhs;
     }
-
-    var mhs3 = mahasiswa('Lala Lawren', 22, [2.2, 2.4, 2.4, 2.8], ['Dago', 'Bandung', 'Jawa Barat']);
+    // pengisian objek harus berurutan sesuai keynya
+    var mhs3 = mahasiswa('Maoren Linuhung', 22, [2.2, 2.4, 2.4, 2.8], ['Dago', 'Bandung', 'Jawa Barat']);
     var mhs4 = mahasiswa('Resty Linuhung', 21, [2.9, 2.8, 3.2, 3.4], ['Jalan Banda', 'Sumedang', 'Jawa Barat'])
 
-    // constraction function (mirip function declaration/adalah function khusus untuk membuat objek)
+    // 3. Constraction function (mirip function declaration/adalah function khusus untuk membuat objek)
     // (untuk membedakan dengan function declar baiknya constraction di awali dengan huruf besar)
     function Mahasiswa(nama, umur, ip, alamat){
         this.nama = nama;
@@ -65,7 +74,7 @@
             provinsi : alamat[2]
         }
     }
-
+    // pemanggialn wajib menggunakan new
     var mhs5 = new Mahasiswa('Sabrina', 23, [3.1, 2.9, 2.8, 3.4], ['Gadung Permai', 'Cianjur', 'Jawa Barat']);
 
 </script>    
