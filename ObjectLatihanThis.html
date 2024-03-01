@@ -12,7 +12,7 @@
     - adalah keyword spesial yang secara otomatis didefinisikan pada setiap function/objek
     - setiap bikin function/objek ada keyword this yang didefinisikan
     */
-   
+
     // function decralation
     // this mengembalikan objek global
     function halo(){
@@ -37,6 +37,36 @@
         console.log('Hallo World');
     }
     new Halo();
+
+    // Latihan mengelola angkot menggunakan objek untuk mengetahui supir dari angkot tertentu, jalur dari angkot yang berjalan, mengelola kas, mengelola penumpang berupa penumpang naik & turun
+
+    function Angkot(supir, jalur, kas, penumpang){
+        this.supir = supir;
+        this.jalur = jalur;
+        this.kas = kas;
+        this.penumpang = penumpang;
+
+        this.penumpangNaik = function(namaPenumpang){
+            this.penumpang.push(namaPenumpang);
+            return this.penumpang;
+        }
+
+        this.penumpangTurun = function(namaPenumpang, bayar = 0){
+            if (this.penumpang.length == 0){
+                    return "Angkot masih kosong";
+            }
+            for (let i = 0; i < this.penumpang.length; i++){
+                if (this.penumpang[i] == namaPenumpang){
+                    this.penumpang[i] = undefined;
+                    this.kas += bayar;
+                    console.log(this.penumpang);
+                    console.log(this.kas);
+                }
+            }
+        }
+    }
+    let angkot = new Angkot('Ariudin', 'Cianjur-Bandung', 0, []);
+
 </script>
 </body>
 </html>
