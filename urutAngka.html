@@ -1,0 +1,18 @@
+<script>
+  function urutArray(arr) {
+  let aab = arr.length;
+  for (let i = 0; i < aab; i++) {
+    for (let j = 0; j < aab - i - 1; j++) {
+      if (arr[j] < arr[j + 1]) {
+        let aba = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = aba;
+      }
+    }
+  }
+  return arr;
+}
+
+console.log(urutArray([1,2,3,4,5]))
+
+</script>

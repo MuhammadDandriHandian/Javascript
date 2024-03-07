@@ -1,0 +1,29 @@
+<script>
+
+function cariBilanganPrima(a, b) {
+  let aab = [];
+
+  for (let angka = a; angka <= b; angka++) {
+    if (isPrima(angka)) {
+      aab.push(angka);
+    }
+  }
+  return aab;
+}
+
+function isPrima(angka) {
+  if (angka <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(angka); i++) {
+    if (angka % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(cariBilanganPrima(0,10))
+
+
+</script>
