@@ -20,52 +20,52 @@
         }
     }
 
-//     /* 2. function declaration
-//         - bikin templatenya dulu baru bikin objeknya
-//         - keuntungan gak perlu buat duplikat, tinggal bikin objek satu nanti tinggal panggil 
-//         - dibelakang layar dua methodnya tetap disimpan dalam memory
-//     */ 
-//     // ini templatenya
-//     function Mahasiswa(nama, energi) {
-//         let mahasiswa = {};
-//         mahasiswa.nama = nama;
-//         mahasiswa.energi = energi;
+    /* 2. function declaration
+        - bikin templatenya dulu baru bikin objeknya
+        - keuntungan gak perlu buat duplikat, tinggal bikin objek satu nanti tinggal panggil 
+        - tapi dibelakang layar dua methodnya tetap disimpan dalam memory
+    */ 
+    // ini templatenya
+    function Mahasiswa(nama, energi) {
+        let mahasiswa = {};
+        mahasiswa.nama = nama;
+        mahasiswa.energi = energi;
         
-//         mahasiswa.makan = function(porsi){
-//             this.energi += porsi;
-//             console.log(`Hallo ${this.nama}, selamat makan`)
-//         }
+        mahasiswa.makan = function(porsi){
+            this.energi += porsi;
+            console.log(`Hallo ${this.nama}, selamat makan`)
+        }
 
-//         mahasiswa.mabok = function(jumlah){
-//             this.energi -= jumlah;
-//             console.log(`Jangan mabok wae atuh ${this.nama} jadi energinya tinggal ${this.energi}`)
-//         }
-//         return mahasiswa;
-//     }
-//     // ini instansiasinya (klo mau bikin mahasiswa berikutnya tinggal bikin lagi instansiasinya)
-//     let mahasiswa3 = Mahasiswa('Ari Irham', 10);
-//     let mahasiswa4 = Mahasiswa('Resti Desember', 4);
+        mahasiswa.mabok = function(jumlah){
+            this.energi -= jumlah;
+            console.log(`Jangan mabok wae atuh ${this.nama} jadi energinya tinggal ${this.energi}`)
+        }
+        return mahasiswa;
+    }
+    // ini instansiasinya (klo mau bikin mahasiswa berikutnya tinggal bikin lagi instansiasinya)
+    let mahasiswa3 = Mahasiswa('Ari Irham', 10);
+    let mahasiswa4 = Mahasiswa('Resti Desember', 4);
 
-//     /* 3. constructor function
-//         - mirip dengan fucnton declaration
-//         - tapi gak perlu nulis declarasi variable dan returnnya
-//     */
-//     function Mahasiswa(nama, energi) {
-//         this.nama = nama;
-//         this.energi = energi;
+    /* 3. constructor function
+        - mirip dengan fucnton declaration
+        - tapi gak perlu nulis declarasi variable dan returnnya
+    */
+    function Mahasiswaa(nama, energi) {
+        this.nama = nama;
+        this.energi = energi;
         
-//         this.makan = function(porsi){
-//             this.energi += porsi;
-//             console.log(`Hallo ${this.nama}, selamat makan`)
-//         }
+        this.makan = function(porsi){
+            this.energi += porsi;
+            console.log(`Hallo ${this.nama}, selamat makan`)
+        }
 
-//         this.mabok = function(jumlah){
-//             this.energi -= jumlah;
-//             console.log(`Jangan mabok wae atuh ${this.nama} jadi energinya tinggal ${this.energi}`)
-//         }
-//     }
-//     // harus pake new biar gak dikira function declaration
-//     let mahasiswa5 = new Mahasiswa('Sabrina Silmi', 40);
+        this.mabok = function(jumlah){
+            this.energi -= jumlah;
+            console.log(`Jangan mabok wae atuh ${this.nama} jadi energinya tinggal ${this.energi}`)
+        }
+    }
+    // harus pake new biar gak dikira function declaration
+    let mahasiswa5 = new Mahasiswaa('Sabrina Silmi', 40);
 
 //     /* 4. object create
 //        - penyimpanan memori lebih sedikit karna method tidk dibuat ulang
@@ -120,25 +120,25 @@
 
    // versi class
    // dibelakang layar menjalankan prototype
-   class Mahasiswa {
-    constructor(nama, energi){
-        this.nama = nama;
-        this.energi = energi;
-    }
-        makan(porsi){
-        this.energi += porsi;
-        return `Halo ${this.nama}, energi kamu bertambah menjadi ${this.energi}`;
-        }
-        main(jam){
-        this.energi -= jam;
-        return `Halo ${this.nama}, energi kamu berkurang menjadi ${this.energi}`;
-        }
-        tidur(jam){
-        this.energi += jam * 2;
-        return `Halo ${this.nama}, energi kamu bertambah menjadi ${this.energi} dari ${this.energi - jam * 2}`;
-        }
-   }
-   let mahasiswa7 = new Mahasiswa('Dandri', 30);
+//    class Mahasiswa {
+//     constructor(nama, energi){
+//         this.nama = nama;
+//         this.energi = energi;
+//     }
+//         makan(porsi){
+//         this.energi += porsi;
+//         return `Halo ${this.nama}, energi kamu bertambah menjadi ${this.energi}`;
+//         }
+//         main(jam){
+//         this.energi -= jam;
+//         return `Halo ${this.nama}, energi kamu berkurang menjadi ${this.energi}`;
+//         }
+//         tidur(jam){
+//         this.energi += jam * 2;
+//         return `Halo ${this.nama}, energi kamu bertambah menjadi ${this.energi} dari ${this.energi - jam * 2}`;
+//         }
+//    }
+//    let mahasiswa7 = new Mahasiswa('Dandri', 30);
 
 
 </script>
