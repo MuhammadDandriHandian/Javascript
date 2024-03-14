@@ -1,0 +1,48 @@
+<script>
+    // ARROW FUNCTION TIDAK MEMILIKI KONSEP THIS
+
+    // objek literal
+    const siswi = {
+        nama: 'Raisya Andriana',
+        umur: 21,
+        sayHello: () => {
+            console.log(`Hello nama saya ${this.nama}, umur saya ${this.umur} tahun`)
+        }
+    }
+    // nama dan umur akan undefined
+
+    // kecuali pada constructor fucntion this akan mengacu pada yg ada didalamnya
+    // constractor function
+    const mahasiswa = function () {
+        this.nama = 'M Dandri Handian';
+        this.umur = 23;
+        this.sayHello = function (){
+            console.log(`Hallo nama saya ${this.nama}, umur saya ${this.umur} tahun`);
+        }
+    }
+    const dandri = new mahasiswa();
+
+    // arrow function
+    // cunstructor function tidak bisa diubah menjadi arrow function, hanya method(function di dalam objek) saja
+    const siswa = function () {
+        this.nama = 'Aliudin',
+        this.umur = 23;
+        this.sayHello = () => {
+            console.log(`Hallo nama saya ${this.nama}, umur saya ${this.umur} tahun`);
+        }
+    }
+    const ali = new siswa();
+
+    const Mahasiswi = function(){
+        this.nama = 'Udin';
+        this.umur = 23;
+        this.sayHello = function(){
+            console.log(`Hallo saya ${this.nama} umur ${this.umur} tahun`);
+        }
+        setInterval(() => {
+            console.log(this.umur++);
+        }, 500);
+    }
+    const udin = new Mahasiswi();
+    // klo setInterval pake function declaration akan kena hoisting sehingga this akan mengecek ke global tidak mengacu ke lexical scopenya, maka output akan NaN
+</script>
