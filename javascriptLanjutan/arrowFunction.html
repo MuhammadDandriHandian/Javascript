@@ -1,0 +1,37 @@
+<script>
+    // ARROW FUNCTION
+    // Adalah bentuk lain yang lebih ringkas dari function expression
+
+    // function expression
+    const tampilNama = function(nama){
+        return "Hallo nama saya " + nama;
+    }
+    console.log(tampilNama('dandri'));
+
+    // pake arrow function
+    const tampilPesan = (nama) => {
+        console.log(`Hallo nama saya ${nama}`);
+    }
+    tampilPesan('ali');
+
+    // arrow function menggunakan implisit return
+    const tampil = nama => 
+    `Halo, nama saya ${nama}`;
+    console.log(tampil('ali'));
+
+    // arrow function menggunakan function bawaan
+    const mahasiswa = ['Dandri', 'Aliudin', 'Bambang'];
+
+    let jumlahHuruf = mahasiswa.map(nama =>
+    nama.length);
+    console.log(jumlahHuruf);
+
+    // objek di dalam arrow function
+    let jumlahHuruff = mahasiswa.map(nama => ({
+        nama: nama,
+        jmlHuruf: nama.length
+    }));
+    // menampilkan dalam bentuk tabel
+    console.table(jumlahHuruff);
+
+</script>
